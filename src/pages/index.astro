@@ -1,8 +1,30 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+// import Welcome from '../components/Welcome.astro';
+import About from '../components/About.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Projects from '../components/Projects.astro';
+// import Layout from '../layouts/Layout.astro';
 ---
+<!-- <Layout></Layout> -->
 
-<Layout>
-	<Welcome />
-</Layout>
+<div>
+	<Header />
+	<Hero />
+	<About />
+	<Projects />
+	<Contact />
+	<Footer />
+</div>
+
+<style is:global>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		color-scheme: light dark;
+	}
+</style>
