@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+  src: string;
+}
+
+const {title, src} = Astro.props;
+---
+
+<div>
+  <img src={src} 
+  alt={`ale02code en ${title}`} 
+  title={title}>
+</div>
+
+<style>
+  div {
+    height: 3rem;
+  }
+
+  img {
+    height: 100%;
+    color: #ccc;
+  }
+</style>

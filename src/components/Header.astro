@@ -7,12 +7,14 @@
 
 <header class="header">
   <div>
-    <div class="logo__container">
-      <img class="logo" src="/public/logo.png" alt="ale02code">
+    <div class="container__logo">
+      <a href="/">
+        <img class="logo" src="/logo.png" alt="ale02code">
+      </a>
     </div>
   </div>
   <div>
-      <div class="">
+      <div class="container__menu">
       <svg viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" class="menu" /></svg>
       </div>
     <div class="hidden">
@@ -36,15 +38,21 @@
   }
 
   svg {
-    height: 50px;
+    height: 65px;
+    cursor: pointer;
   }
 
-  .logo__container {
-    height: 85px;
+  .container__logo {
+    height: 80px;
   }
 
   .logo {
     height: 100%;
+    cursor: pointer;
+  }
+  
+  .container__menu {
+    color: #fff;
   }
 
   .hidden {

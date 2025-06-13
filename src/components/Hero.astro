@@ -1,0 +1,62 @@
+---
+import SocialNetworkIcon from "./SocialNetworkIcon.astro";
+---
+
+<section>
+  <div>
+    <div class="container__me">
+      <img class="me" src="me2.png" alt="Christopher Chacon" />
+    </div>
+  </div>
+  <div>
+    <div>
+      <span>Software Developer</span>
+      <h1>Christopher Chacon</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
+        ipsam omnis adipisci quam officia eius laboriosam, odit quidem ab optio
+        porro, qui quisquam voluptates ducimus.
+      </p>
+      <a href="#">More about me</a>
+    </div>
+    <div class="container__social-network">
+      <SocialNetworkIcon
+        title="Instagram"
+        src="/social-networks/instagram.svg"
+      />
+      <SocialNetworkIcon title="Tik Tok" src="/social-networks/tiktok.svg" />
+      <SocialNetworkIcon title="Github" src="/social-networks/github.svg" />
+    </div>
+  </div>
+</section>
+
+<style>
+  h1 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    text-transform: capitalize;
+  }
+
+  .container__social-network {
+    display: flex;
+  }
+
+  .container__me {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    border: solid 3px #000;
+    border-radius: 50%;
+    background: rgb(93, 93, 214);
+    overflow: hidden;
+  }
+
+  .me {
+    height: 200px;
+  }
+</style>
