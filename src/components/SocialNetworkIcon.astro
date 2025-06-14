@@ -4,21 +4,24 @@ interface Props {
   src: string;
 }
 
-const {title, src} = Astro.props;
+const { title, src } = Astro.props;
 ---
 
-<div>
-  <img src={src} 
-  alt={`ale02code en ${title}`} 
-  title={title}>
+<div class="social-network">
+  <img
+    class="social-network__image"
+    src={src}
+    alt={`ale02code en ${title}`}
+    title={title}
+  />
 </div>
 
 <style>
-  div {
+  .social-network {
     height: 3rem;
   }
 
-  img {
+  .social-network__image {
     height: 100%;
     color: #ccc;
   }

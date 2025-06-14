@@ -1,72 +1,85 @@
----
-// let menu = document.querySelector('.menu');
-// menu?.addEventListener('click', () => {
-//   console.log("Menu is Working")
-// })
----
-
 <header class="header">
-  <div>
-    <div class="container__logo">
+  <div class="header__container">
+    <div class="header__logo">
       <a href="/">
-        <img class="logo" src="/logo.png" alt="ale02code">
+        <img class="header__logo-image" src="/logo.png" alt="ale02code" />
       </a>
     </div>
   </div>
-  <div>
-      <div class="container__menu">
-      <svg viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" class="menu" /></svg>
-      </div>
-    <div class="hidden">
-      <nav class="nav">
-        <a href="#">Inicio</a>
-        <a href="#">Sobre mi</a>
-        <a href="#">Proyectos</a>
-        <a href="#">Contacto</a>
+
+  <div class="header__menu-container">
+    <div class="header__menu-icon">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="header__menu-svg"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 6l16 0"></path>
+        <path d="M4 12l16 0"></path>
+        <path d="M4 18l16 0" class="header__menu-line"></path>
+      </svg>
+    </div>
+
+    <div class="header__nav-container header__nav-container--hidden">
+      <nav class="header__nav">
+        <a class="header__nav-link" href="#">Inicio</a>
+        <a class="header__nav-link" href="#">Sobre mi</a>
+        <a class="header__nav-link" href="#">Proyectos</a>
+        <a class="header__nav-link" href="#">Contacto</a>
       </nav>
     </div>
   </div>
 </header>
 
 <style>
-  header {
+  .header {
     background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
-  svg {
+  .header__menu-svg {
     height: 65px;
     cursor: pointer;
   }
 
-  .container__logo {
+  .header__logo {
     height: 80px;
   }
 
-  .logo {
+  .header__logo-image {
     height: 100%;
     cursor: pointer;
   }
-  
-  .container__menu {
+
+  .header__menu-icon {
     color: #fff;
   }
 
-  .hidden {
+  .header__nav-container--hidden {
     display: none;
   }
 
-  .menu {
+  .header__menu-line {
     height: 85px;
     cursor: pointer;
   }
 
-  .nav {
+  .header__nav {
     display: flex;
     flex-direction: column;
     text-align: center;
+  }
+
+  .header__nav-link {
+    color: white;
+    text-decoration: none;
   }
 </style>
