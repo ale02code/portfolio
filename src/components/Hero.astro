@@ -4,67 +4,139 @@ import "../styles/global.css";
 ---
 
 <section class="profile">
-  <div class="profile__image-wrapper">
-    <div class="profile__image-container">
-      <img
-        class="profile__image"
-        src="profile-image.png"
-        alt="Christopher Chacon"
-      />
-    </div>
-  </div>
-
   <div class="profile__content">
     <div class="profile__text">
-      <span class="profile__role">Software Developer</span>
-      <h1 class="profile__name">Christopher Chacon</h1>
+      <h1 class="profile__name">Hi, i'm Chris 👋🏽</h1>
+      <h1 class="profile__role">
+        <span class="profile__role-mark">Full</span>-Stack Developer
+      </h1>
       <p class="profile__description">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
-        ipsam omnis adipisci quam officia eius laboriosam, odit quidem ab optio
-        porro, qui quisquam voluptates ducimus.
+        I'm a full-stack developer based in El Salvador, I'll help you build
+        beautiful websites your clients will love.
       </p>
-      <a class="profile__link" href="#">More about me</a>
     </div>
 
-    <div class="profile__social-networks">
-      <SocialNetworkIcon
-        title="Instagram"
-        src="/social-networks/instagram.svg"
-      />
-      <SocialNetworkIcon title="Tik Tok" src="/social-networks/tiktok.svg" />
-      <SocialNetworkIcon title="Github" src="/social-networks/github.svg" />
+    <div class="profile__social">
+      <button class="profile__social__about profile__social__about--hover"
+        ><a href="/">More about me</a>
+      </button>
+
+      <div class="profile__social__networks">
+        <SocialNetworkIcon
+          title="Instagram"
+          src="/social-networks/instagram.svg"
+        />
+        <SocialNetworkIcon title="Tik Tok" src="/social-networks/tiktok.svg" />
+        <SocialNetworkIcon title="Github" src="/social-networks/github.svg" />
+      </div>
+    </div>
+
+    <div class="profile__image-wrapper">
+      <div class="profile__image-container">
+        <img
+          class="profile__image"
+          src="profile-image.png"
+          alt="Christopher Chacon"
+        />
+      </div>
     </div>
   </div>
 </section>
 
 <style>
+  .profile {
+    overflow-x: hidden;
+    margin-top: 75px;
+  }
+
   .profile__name {
-    font-size: var(--title-size);
-    text-transform: uppercase;
+    font-size: 24px;
+    color: var(--text-color);
+    font-weight: 300;
+    letter-spacing: -2px;
+    /* text-transform: uppercase; */
   }
 
   .profile__role {
-    font-size: var(--text-size);
+    font-size: var(--title-size);
+    line-height: 60px;
+    margin: 1rem 0;
+    font-weight: 800;
+    color: #24262f;
+    text-transform: capitalize;
+    text-wrap: balance;
+    /* line-height: 1.8rem; */
+  }
+
+  .profile__role-mark {
+    color: var(--primary-color);
+  }
+
+  .profile__description {
+    font-size: 1.2rem;
+    text-wrap: pretty;
+    color: var(--text-color);
+  }
+
+  .profile__social {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .profile__social__about {
+    background: transparent;
+    border-radius: 4px;
+    border: solid 2px var(--text-color);
+    transition: all 0.5s;
+    padding: 1rem;
+  }
+
+  .profile__social__about > a {
+    text-decoration: none;
+    color: var(--primary-color);
     text-transform: capitalize;
   }
 
-  .profile__social-networks {
+  .profile__social__about--hover:hover {
+    /* border: solid 2px #fff; */
+    background: var(--primary-color);
+  }
+
+  .profile__social__about--hover:hover > a {
+    color: #fff;
+  }
+
+  .profile__social__networks {
     display: flex;
+    gap: 5px;
+  }
+
+  .profile__image-wrapper {
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 265px;
+    width: 265px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: solid 2px var(--text-color);
   }
 
   .profile__image-container {
-    height: 200px;
-    width: 200px;
+    height: 230px;
+    width: 230px;
     display: flex;
     justify-content: center;
     align-items: start;
-    border: solid 3px #000;
     border-radius: 50%;
     background: var(--primary-color);
     overflow: hidden;
   }
 
   .profile__image {
-    height: 200px;
+    height: 250px;
   }
 </style>
