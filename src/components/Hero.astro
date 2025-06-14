@@ -1,5 +1,6 @@
 ---
 import SocialNetworkIcon from "./SocialNetworkIcon.astro";
+import "../styles/global.css";
 ---
 
 <section class="profile">
@@ -38,11 +39,12 @@ import SocialNetworkIcon from "./SocialNetworkIcon.astro";
 
 <style>
   .profile__name {
-    font-size: 1.8rem;
+    font-size: var(--title-size);
     text-transform: uppercase;
   }
 
   .profile__role {
+    font-size: var(--text-size);
     text-transform: capitalize;
   }
 
@@ -58,7 +60,7 @@ import SocialNetworkIcon from "./SocialNetworkIcon.astro";
     align-items: start;
     border: solid 3px #000;
     border-radius: 50%;
-    background: rgb(93, 93, 214);
+    background: var(--primary-color);
     overflow: hidden;
   }
 
