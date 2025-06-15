@@ -1,0 +1,39 @@
+---
+import "../styles/global.css";
+
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+---
+
+<section class="project">
+  <h3 class="project__title">Projects<span>.</span></h3>
+
+  <div class="project__container">
+    <div class="project__content">
+      {
+        projects.map(({ data }) => (
+          <div>
+            <h2>{data.title}</h2>
+            <p>{data.description}</p>
+            <img src={data.img} alt={data.title} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .project {
+  }
+
+  .project__title {
+    font-size: var(--title-size);
+    color: var(--title-color);
+  }
+
+  .project__title > span {
+    color: var(--primary-color);
+  }
+</style>
